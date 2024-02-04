@@ -1,1 +1,26 @@
 <app-header></app-header>
+<div class="login-screen">
+    <div class="login-component">
+        <div class="inner-login-field-container">
+            <form>
+                <div class="column-container">
+                    <img src="../../assets/evilLogo.png" class="logo" alt="logo">
+                    <span class="logo-name">MySecrets</span>
+                    <mat-form-field class="login-field">
+                        <mat-label>Email</mat-label>
+                        <input type="email" matInput [formControl]="emailAddress"
+                                placeholder="Ex. pat@example.com">
+                        </mat-form-field>
+                    <mat-form-field class="login-field">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                    <button mat-raised-button class="login-button">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

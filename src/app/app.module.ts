@@ -16,7 +16,7 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
