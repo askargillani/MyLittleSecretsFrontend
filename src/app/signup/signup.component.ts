@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { AppServiceService } from '../app-service.service';
 
 
 @Component({
@@ -33,4 +34,20 @@ export class SignupComponent {
   emailAddress = new FormControl("", [Validators.required, Validators.email]);
   password = new FormControl("", Validators.required,)
   hide = true;
+
+  constructor(
+    private appService: AppServiceService
+  ){
+
+  }
+  onSubmit() {
+    this.appService.signup(this.emailAddress?.value,this.password?.value).subscribe(
+      response => {
+        console.log(response);
+      },
+      error => {
+        console.error(error);
+      }
+    );
+  }
 }

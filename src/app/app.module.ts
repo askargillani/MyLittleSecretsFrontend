@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { SignupComponent } from './signup/signup.component';
 import { RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RouterOutlet } from '@angular/router';
     LoginComponent,
     HeaderComponent,
     SignupComponent,
-    RouterOutlet
+    RouterOutlet,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
