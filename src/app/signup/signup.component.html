@@ -10,6 +10,9 @@
                         <mat-label>Email</mat-label>
                         <input type="email" matInput [formControl]="emailAddress"
                                 placeholder="Ex. pat@example.com">
+                        <mat-error id="signup-email-error" style="color: black !important">
+                            Please enter a unique valid email address.
+                        </mat-error>
                         </mat-form-field>
                     <mat-form-field class="signup-field">
                         <mat-label>Enter your password</mat-label>
@@ -17,9 +20,12 @@
                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         </button>
+                        <mat-error id="signup-email-error" style="color: black !important">
+                            Please enter a valid password.
+                        </mat-error>
                     </mat-form-field>
                     <span><a href="/login">Do you want to login?</a></span>
-                    <button type="submit" mat-raised-button class="signup-button">Signup</button>
+                    <button type="submit" [ngClass]="!emailAddress.valid || !password.valid?'grey-button':'signup-button'" mat-raised-button [disabled]="!emailAddress.valid || !password.valid">Signup</button>
                 </div>
             </form>
         </div>
