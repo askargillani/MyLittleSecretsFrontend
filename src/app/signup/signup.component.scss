@@ -1,0 +1,65 @@
+@import '../../styles.scss';
+
+.signup-screen
+{
+    background-color: #0e1111; 
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.signup-component {
+    height: 500px;
+    width: 500px;
+    background-color: $primary-color;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-field {
+    width: 400px;
+    border-radius: 10px;
+    background-color: $primary-color !important;
+}
+
+.inner-signup-field-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.logo-name {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-family: 'Protest Riot', sans-serif;
+}
+
+:host::ng-deep .mat-mdc-text-field-wrapper {
+    border-radius: 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.signup-button {
+    width: 100px; 
+    background-color: black !important; 
+    color: white !important;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+            

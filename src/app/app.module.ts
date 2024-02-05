@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
+import { SignupComponent } from './signup/signup.component';
+import { RouterOutlet } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserAnimationsModule,
     LoginComponent,
     HeaderComponent,
+    SignupComponent,
+    RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]

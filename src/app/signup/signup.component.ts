@@ -13,25 +13,23 @@ import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-signup',
   standalone: true,
-  imports: [
-              CommonModule, 
-              HeaderComponent, 
-              MatInputModule, 
-              FormsModule, 
-              ReactiveFormsModule, 
-              MatFormFieldModule, 
-              MatIconModule,
-              MatButtonModule,
-              RouterLink],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  imports: [CommonModule, 
+    HeaderComponent, 
+    MatInputModule, 
+    FormsModule, 
+    ReactiveFormsModule, 
+    MatFormFieldModule, 
+    MatIconModule,
+    MatButtonModule],
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.scss']
 })
-export class LoginComponent {
+export class SignupComponent {
   emailAddress = new FormControl("", [Validators.required, Validators.email]);
   password = new FormControl("", Validators.required,)
   hide = true;
